@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amr Karim – Application Security & Full-Stack Developer</title>
+<meta name="description" content="Web, API and mobile penetration testing plus secure code review for .NET and Angular. CEH certified.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amr Karim | Application Security & Full-Stack Developer">
+<meta property="og:description" content="Web, API and mobile penetration testing plus secure code review for .NET and Angular. CEH certified. View projects and download my CV.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#08110E;--surf:#0F1B17;--ink:#ECF6F1;--mute:#9DB5AA;--line:#1F3A31;--acc:#34D399;--acc2:#38BDF8;--bad:#FB7185;--warn:#FBBF24;--ok:#4ADE80;--wa:#1FA66A;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){color-scheme:light;--bg:#F3F6FB;--surf:#fff;--ink:#0B1220;--mute:#52607A;--line:#D3DBE8;--acc:#0A6FD6;--bad:#D6244A;--warn:#B96A00;--ok:#0C8A58;--wa:#12805C}}
+:root[data-theme="light"]{color-scheme:light;--bg:#F3F6FB;--surf:#fff;--ink:#0B1220;--mute:#52607A;--line:#D3DBE8;--acc:#0A6FD6;--bad:#D6244A;--warn:#B96A00;--ok:#0C8A58;--wa:#12805C}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Sora,system-ui,-apple-system,"Segoe UI",sans-serif;background-image:radial-gradient(900px 420px at 85% -5%,rgba(77,225,255,.10),transparent 70%)}
+a{color:inherit}:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:12px}
+.brand{font:600 17px "JetBrains Mono",monospace;text-decoration:none}.brand i{color:var(--acc);font-style:normal}
+nav{display:flex;gap:22px;align-items:center;font-size:15px}nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid var(--acc);background:var(--acc);color:#04101A}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:42px;align-items:center;padding:36px 0 70px}
+h1{font-size:clamp(36px,5.6vw,60px);line-height:1.06;letter-spacing:-.03em;font-weight:800;margin:0 0 20px}
+.lead{font-size:18px;color:var(--mute);max-width:50ch;margin:0 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.term{background:#050911;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35);color:#DCE6F5}
+.bar{display:flex;gap:7px;align-items:center;padding:11px 14px;border-bottom:1px solid #16223A;font:400 12px "JetBrains Mono",monospace;color:#7F90AA}
+.bar b{width:10px;height:10px;border-radius:50%;background:#2A3A57}.bar span{margin-left:8px}
+#t{margin:0;padding:18px;font:400 13.5px/1.75 "JetBrains Mono",ui-monospace,monospace;min-height:260px;white-space:pre-wrap;word-break:break-word}
+#t .p{color:#4DE1FF}#t .d{color:#7F90AA}#t .h{color:#FF5470}#t .m{color:#FFB84D}#t .ok{color:#3DDC97}
+.caret{display:inline-block;width:8px;height:15px;background:#4DE1FF;vertical-align:-2px;animation:b 1s steps(2) infinite}
+@keyframes b{50%{opacity:0}}
+.note{font-size:13px;color:var(--mute);margin:10px 2px 0}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(27px,4vw,38px);letter-spacing:-.02em;line-height:1.12;margin:0 0 12px;font-weight:800}
+.sub{color:var(--mute);margin:0 0 34px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.svc{background:var(--surf);border:1px solid var(--line);border-top:3px solid var(--acc);border-radius:8px;padding:22px}
+.svc:nth-child(2){border-top-color:var(--bad)}.svc:nth-child(3){border-top-color:var(--warn)}.svc:nth-child(4){border-top-color:var(--ok)}
+.svc h3{margin:0 0 8px;font-size:20px}.svc p{margin:0;color:var(--mute);font-size:16px}
+.tag{display:inline-block;font:600 12px "JetBrains Mono",monospace;padding:2px 8px;border-radius:4px;margin-left:8px;vertical-align:2px;background:rgba(255,184,77,.15);color:var(--warn)}
+.creds{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.creds h3{font:600 14px "JetBrains Mono",monospace;margin:0 0 12px;color:var(--mute)}
+.pill{display:flex;justify-content:space-between;gap:10px;padding:13px 0;border-top:1px solid var(--line);font-weight:600}
+.pill span{font:600 12px "JetBrains Mono",monospace;padding:3px 9px;border-radius:4px;align-self:center;white-space:nowrap}
+.done span{background:rgba(61,220,151,.15);color:var(--ok)}.prog span{background:rgba(255,184,77,.15);color:var(--warn)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:16px 16px 0 0;border-top:2px solid var(--acc);font-size:15px;color:var(--mute)}
+.steps li::before{content:counter(s);display:block;font:600 13px "JetBrains Mono",monospace;color:var(--acc);margin-bottom:4px}
+.steps strong{display:block;color:var(--ink);font-size:17px}
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.finding{background:var(--surf);border:1px solid var(--line);border-left:5px solid var(--bad);padding:22px;border-radius:6px}
+.finding h3{margin:0 0 6px;font-size:20px}.sev{background:var(--bad);color:#fff;font:600 12px "JetBrains Mono",monospace;padding:2px 8px;border-radius:3px;margin-right:8px}
+.finding dl{margin:14px 0 0;display:grid;grid-template-columns:84px 1fr;gap:8px 14px;font-size:15px}.finding dt{font-weight:600}.finding dd{margin:0;color:var(--mute)}
+.panel{background:#050911;border:1px solid var(--line);border-radius:8px;overflow:hidden;color:#DCE6F5}
+.tabs{display:flex;border-bottom:1px solid #16223A}
+.tabs button{flex:1;padding:12px;background:none;border:0;color:#7F90AA;font:600 13px "JetBrains Mono",monospace;cursor:pointer;border-bottom:3px solid transparent}
+.tabs button[aria-selected="true"]{color:#fff}.tabs button[data-m="bad"][aria-selected="true"]{border-color:#FF5470}.tabs button[data-m="good"][aria-selected="true"]{border-color:#3DDC97}
+pre.cd{margin:0;padding:18px;font:400 13px/1.7 "JetBrains Mono",monospace;overflow-x:auto;min-height:150px}.c{color:#7F90AA}
+.res{border-top:1px solid #16223A;padding:12px 18px;font-size:14px;display:flex;gap:10px;align-items:baseline;animation:sw .3s ease}
+.res b{font:600 12px "JetBrains Mono",monospace;padding:2px 7px;border-radius:3px;color:#050911}.res.bad b{background:#FF5470}.res.good b{background:#3DDC97}
+@keyframes sw{from{opacity:.2}to{opacity:1}}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{font:400 14px "JetBrains Mono",monospace;padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surf)}
+.links{margin-top:28px;display:flex;gap:22px;flex-wrap:wrap;color:var(--mute)}
+footer{border-top:1px solid var(--line);padding:22px 0 90px;color:var(--mute);font-size:14px}
+.fab{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));background:var(--wa);color:#fff;text-decoration:none;font-weight:600;padding:14px 20px;border-radius:999px;box-shadow:0 8px 28px rgba(0,0,0,.4);z-index:5}
+@media (max-width:820px){.hero,.proof,.grid,.creds{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr;gap:18px}nav a.h{display:none}.hero{padding-top:16px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.caret,.res{animation:none}}
+body{background-image:radial-gradient(700px 420px at 85% -5%,rgba(139,123,255,.25),transparent 70%),radial-gradient(600px 400px at -5% 35%,rgba(34,211,238,.12),transparent 70%)}
+body::before{content:'';position:fixed;inset:-25%;z-index:-1;pointer-events:none;background:conic-gradient(from 0deg at 50% 50%,rgba(139,123,255,.13),rgba(34,211,238,.10),rgba(255,107,138,.09),rgba(139,123,255,.13));filter:blur(100px);animation:spin 34s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sbar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2,var(--acc)));z-index:20}
+.grad{background:linear-gradient(90deg,var(--acc),var(--acc2,var(--acc)),#FF6B8A,var(--acc));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 7s linear infinite}
+@keyframes flow{to{background-position:300% 0}}
+nav a:not(.btn){position:relative}nav a:not(.btn)::after{content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--acc);transition:width .25s}nav a:not(.btn):hover::after{width:100%}
+.btn{transition:transform .2s,box-shadow .2s;background-image:linear-gradient(135deg,var(--acc),var(--acc2,var(--acc)))}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px -8px var(--acc)}.btn.wa:hover{box-shadow:0 12px 30px -8px var(--wa)}
+.term{box-shadow:0 0 0 1px rgba(139,123,255,.35),0 24px 70px -20px rgba(124,108,255,.55)}
+.svc,.finding,.chips span{transition:transform .25s,box-shadow .25s,color .25s}
+.svc{position:relative;overflow:hidden}.svc::after{content:'';position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(139,123,255,.20),transparent 70%);opacity:0;transition:opacity .25s;pointer-events:none}
+.svc:hover{transform:translateY(-6px);box-shadow:0 18px 40px -16px rgba(139,123,255,.6)}.svc:hover::after{opacity:1}
+.chips span:hover{transform:translateY(-3px);color:var(--acc2,var(--acc));box-shadow:0 8px 20px -10px var(--acc)}
+.sev{animation:pulse 2.2s infinite}@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,107,138,.6)}70%,100%{box-shadow:0 0 0 10px rgba(255,107,138,0)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding:0 0 64px}
+.stats b{display:block;font-size:clamp(30px,4.2vw,44px);font-weight:800;line-height:1.1;background:linear-gradient(90deg,var(--acc),var(--acc2,var(--acc)));-webkit-background-clip:text;background-clip:text;color:transparent}.stats i{font-style:normal}
+.stats small{display:block;color:var(--mute);font-size:14px;margin-top:4px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}.rv.in{opacity:1;transform:none}
+@media (max-width:820px){.stats{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){body::before,.grad,.sev{animation:none}.rv{opacity:1;transform:none;transition:none}}
+:root[data-t="emerald"]{color-scheme:dark;--bg:#08110E;--surf:#0F1B17;--ink:#ECF6F1;--mute:#9DB5AA;--line:#1F3A31;--acc:#34D399;--acc2:#38BDF8;--bad:#FB7185;--warn:#FBBF24;--ok:#4ADE80;--wa:#1FA66A}
+:root[data-t="ocean"]{color-scheme:dark;--bg:#0A1020;--surf:#111B33;--ink:#EAF0FF;--mute:#9FB0D3;--line:#223259;--acc:#60A5FA;--acc2:#22D3EE;--bad:#FB7185;--warn:#FBBF24;--ok:#4ADE80;--wa:#1FA66A}
+:root[data-t="violet"]{color-scheme:dark;--bg:#0B0A1F;--surf:#14132F;--ink:#F2F0FF;--mute:#ABA8CF;--line:#2B2955;--acc:#8B7BFF;--acc2:#EC4899;--bad:#FF6B8A;--warn:#FFC266;--ok:#4ADE9A;--wa:#1FA66A}
+:root[data-t="light"]{color-scheme:light;--bg:#F6F8FB;--surf:#FFFFFF;--ink:#0F172A;--mute:#55627A;--line:#D8DFEA;--acc:#0F766E;--acc2:#2563EB;--bad:#D6244A;--warn:#B96A00;--ok:#0C8A58;--wa:#12805C}
+:root[data-t="light"] .btn:not(.wa):not(.ghost),:root[data-t="light"] .flt button[aria-pressed="true"]{color:#fff}
+body{background-image:radial-gradient(700px 420px at 85% -5%,color-mix(in srgb,var(--acc) 22%,transparent),transparent 70%),radial-gradient(600px 400px at -5% 35%,color-mix(in srgb,var(--acc2) 11%,transparent),transparent 70%)}
+body::before{background:conic-gradient(from 0deg,color-mix(in srgb,var(--acc) 13%,transparent),color-mix(in srgb,var(--acc2) 10%,transparent),color-mix(in srgb,var(--acc) 13%,transparent))}
+.term{box-shadow:0 0 0 1px color-mix(in srgb,var(--acc) 35%,transparent),0 24px 70px -20px color-mix(in srgb,var(--acc) 50%,transparent)}
+.svc::after{background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--acc) 20%,transparent),transparent 70%)}
+.svc:hover{box-shadow:0 18px 40px -16px color-mix(in srgb,var(--acc) 60%,transparent)}
+.sw{display:flex;gap:8px;align-items:center}.sw button{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);cursor:pointer;padding:0;transition:transform .2s,border-color .2s}.sw button:hover{transform:scale(1.2)}.sw button[aria-pressed="true"]{border-color:var(--ink);transform:scale(1.15)}
+.av{display:inline-flex;align-items:center;gap:9px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--mute);margin:0 0 18px;background:var(--surf)}.av i{width:9px;height:9px;border-radius:50%;background:var(--ok);animation:pulse2 2s infinite}
+@keyframes pulse2{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ok) 60%,transparent)}70%,100%{box-shadow:0 0 0 9px transparent}}
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:44px;align-items:start}.two .sub:last-child{margin-bottom:0}
+.facts{margin:0}.facts div{padding:14px 0;border-top:1px solid var(--line)}.facts dt{font:400 13px "JetBrains Mono",monospace;color:var(--mute)}.facts dd{margin:0;font-weight:600}
+.flt{display:flex;gap:8px;margin:0 0 22px;flex-wrap:wrap}.flt button{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surf);color:var(--mute);font:600 14px Sora,system-ui,sans-serif;cursor:pointer;transition:all .2s}.flt button:hover{color:var(--ink)}.flt button[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:#04101A}
+.proj[hidden]{display:none}.k{display:block;font:600 12px "JetBrains Mono",monospace;color:var(--acc);margin-bottom:8px}
+.tg{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}.tg span{font:400 12px "JetBrains Mono",monospace;padding:3px 9px;border-radius:4px;background:color-mix(in srgb,var(--acc) 14%,transparent);color:var(--acc)}
+.pl a{display:inline-block;margin-top:14px;color:var(--acc);font-weight:600;text-decoration:none}.pl a:hover{text-decoration:underline}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:26px}.ti{position:relative;padding-bottom:26px}.ti::before{content:'';position:absolute;left:-33px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 25%,transparent)}
+.ti b{font-size:19px;display:block}.ti small{display:block;color:var(--mute);font:400 13px "JetBrains Mono",monospace;margin:2px 0 6px}.ti p{margin:0;color:var(--mute);font-size:16px;max-width:62ch}
+@media (max-width:820px){.two{grid-template-columns:1fr;gap:20px}.sw{gap:6px}}
+@media (prefers-reduced-motion:reduce){.av i{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+ <a class="brand" href="#top"><i>&gt;</i> amr.karim</a>
+ <nav><a class="h" href="#projects">Projects</a><a class="h" href="#experience">Experience</a><a class="h" href="#services">Services</a><a class="h" href="#credentials">Credentials</a><div class="sw" role="group" aria-label="Color theme"><button data-t="emerald" aria-label="Emerald theme" aria-pressed="true" style="background:linear-gradient(135deg,#34D399,#38BDF8)"></button><button data-t="ocean" aria-label="Ocean theme" aria-pressed="false" style="background:linear-gradient(135deg,#60A5FA,#22D3EE)"></button><button data-t="violet" aria-label="Violet theme" aria-pressed="false" style="background:linear-gradient(135deg,#8B7BFF,#EC4899)"></button><button data-t="light" aria-label="Light theme" aria-pressed="false" style="background:linear-gradient(135deg,#FFFFFF,#0F766E)"></button></div><a class="btn wa" href="https://wa.me/201003286392?text=Hi%20Amr%2C%20I%27d%20like%20to%20discuss%20a%20security%20assessment." target="_blank" rel="noopener">WhatsApp me</a></nav>
+</header>
+
+<main id="top">
+<div class="hero">
+ <div>
+  <p class="av"><i></i>Available for freelance projects and full-time roles</p>
+  <h1>I build web apps in .NET and Angular. Then I try to <span class="grad">break them.</span></h1>
+  <p class="lead">Application security for teams that ship. I test web apps, APIs and mobile apps the way an attacker would, then hand your developers the proof and the fix.</p>
+  <div class="cta"><a class="btn wa" href="https://wa.me/201003286392?text=Hi%20Amr%2C%20I%27d%20like%20to%20discuss%20a%20security%20assessment." target="_blank" rel="noopener">Chat on WhatsApp</a><a class="btn ghost cvbtn" href="Amr_Karim_CV.pdf" download="Amr_Karim_CV.pdf" rel="noopener">Download CV</a><a class="btn ghost" href="mailto:amrkarim000@gmail.com">Send an email</a></div>
+ </div>
+ <div>
+  <div class="term" role="img" aria-label="Demo terminal session showing a penetration test producing three findings">
+   <div class="bar"><b></b><b></b><b></b><span>pentest-session</span></div>
+   <pre id="t"></pre>
+  </div>
+  <p class="note">Demo output to show my workflow. Not a real client.</p>
+ </div>
+</div>
+</main>
+
+<div class="stats"><div><b><i data-n="47">0</i>/50</b><small>CEH exam score</small></div><div><b><i data-n="10">0</i></b><small>OWASP Top 10 classes I test</small></div><div><b><i data-n="2">0</i></b><small>Production apps shipped</small></div><div><b><i data-n="1920">0</i></b><small>LinkedIn followers</small></div></div>
+
+<section id="about"><div class="two"><div><h2>About me</h2><p class="sub">I’m a full-stack developer who also works in offensive security. Building Angular and .NET apps from the inside gives me a practical view of how vulnerabilities actually appear in real code, and how to fix them.</p><p class="sub">I write clear reports with proof of concept, risk rating and remediation steps, so your developers can act on them right away.</p></div><dl class="facts"><div><dt>Based in</dt><dd>Cairo, Egypt</dd></div><div><dt>Works</dt><dd>Remote, hybrid or on-site</dd></div><div><dt>Languages</dt><dd>Arabic (native), English (B2)</dd></div><div><dt>Open to</dt><dd>Freelance projects and full-time roles</dd></div></dl></div></section>
+
+<section id="projects">
+ <h2>Projects</h2>
+ <p class="sub">Production apps and APIs I designed and built.</p>
+ <div class="flt"><button aria-pressed="true" data-f="all">All</button><button aria-pressed="false" data-f="fe">Frontend</button><button aria-pressed="false" data-f="be">Backend</button></div>
+ <div class="grid">
+  <div class="svc proj" data-k="fe"><span class="k">Frontend, live in production</span><h3>Jiwar Platform</h3><p>Community platform connecting neighbors and local businesses, with search and filters, user dashboards and dynamic listings.</p><div class="tg"><span>Angular</span><span>TypeScript</span><span>RxJS</span><span>Bootstrap</span></div><div class="pl"><a href="https://jiwar.yesdigitallab.com" target="_blank" rel="noopener">Open live site</a></div></div>
+  <div class="svc proj" data-k="fe"><span class="k">Frontend, internal portal</span><h3>Lab Portal</h3><p>Lab management portal with role-based access, an admin dashboard, reactive forms and full API integration.</p><div class="tg"><span>Angular</span><span>NgRx</span><span>Angular Material</span><span>REST APIs</span></div></div>
+  <div class="svc proj" data-k="fe"><span class="k">Frontend, in development</span><h3>Virtual Try-On</h3><p>Customers open their camera and try clothes live before buying: shirt, pants, shoes, glasses and cap.</p><div class="tg"><span>Angular</span><span>MediaPipe</span><span>Camera API</span></div></div>
+  <div class="svc proj" data-k="be"><span class="k">Backend API</span><h3>FoodApp API</h3><p>Onion Architecture with CQRS through MediatR for testable business logic, and fast read endpoints using EF Core projections.</p><div class="tg"><span>ASP.NET Core 8</span><span>CQRS</span><span>MediatR</span><span>JWT</span><span>Swagger</span></div></div>
+  <div class="svc proj" data-k="be"><span class="k">Backend API</span><h3>E-Commerce and HR Web API</h3><p>Accounts, basket, payments, products and employees with webhook integration, built on Generic Repository and Unit of Work.</p><div class="tg"><span>EF Core</span><span>AutoMapper</span><span>JWT</span><span>SQL Server</span></div></div>
+  <div class="svc proj" data-k="be"><span class="k">Backend API</span><h3>Hotel Reservation System</h3><p>Hotel search, room reservations, cancellations and payment processing, with async code and DTOs that limit what the API exposes.</p><div class="tg"><span>ASP.NET Core 8</span><span>Repository Pattern</span><span>EF Core</span></div></div>
+  <div class="svc proj" data-k="be"><span class="k">Full-stack web app</span><h3>E-Commerce MVC</h3><p>Product catalog, admin dashboard, shopping cart and role-based access through ASP.NET Identity.</p><div class="tg"><span>ASP.NET Core MVC</span><span>Identity</span><span>Bootstrap</span></div><div class="pl"><a href="https://github.com/3MR-Karim" target="_blank" rel="noopener">See my GitHub</a></div></div>
+ </div>
+</section>
+
+<section id="experience">
+ <h2>Experience and education</h2>
+ <p class="sub">Building software and learning offense side by side.</p>
+ <div class="tl">
+  <div class="ti"><b>Full-Stack Developer, Digital Lab</b><small>April 2025 to present, hybrid</small><p>Angular and ASP.NET Core 8 for production apps: reusable components, RBAC with route guards, REST APIs with Clean Architecture and JWT authentication.</p></div>
+  <div class="ti"><b>Cybersecurity Penetration Testing Trainee, IT Gate Academy</b><small>April 2025 to present</small><p>One-year offensive security program on network, OS, web and mobile, aligned with OSCP, CEH and OWASP. Bug bounty on HackerOne.</p></div>
+  <div class="ti"><b>Backend .NET Core Trainee, Route Academy</b><small>2024</small><p>C#, SQL Server, EF Core, Web API, MVC and design patterns.</p></div>
+  <div class="ti"><b>Bachelor of Commerce, Damanhour University</b><small>2020 to 2023, English Department</small></div>
+ </div>
+</section>
+
+<section id="services">
+ <h2>What I test and build</h2>
+ <p class="sub">Every engagement ends with a report your developers can act on the same day.</p>
+ <div class="grid">
+  <div class="svc"><h3>Web & API penetration testing</h3><p>Manual testing against the OWASP Top 10: XSS, SQL injection, IDOR, SSRF, CSRF and broken authentication, using Burp Suite and OWASP ZAP.</p></div>
+  <div class="svc"><h3>Secure code review</h3><p>I read your .NET and Angular code looking at authentication, authorization, input handling and data exposure before an attacker does.</p></div>
+  <div class="svc"><h3>Mobile app testing<span class="tag">in training</span></h3><p>Traffic interception, local data storage and login flows of mobile apps, plus the API behind them. Part of my current IT Gate program.</p></div>
+  <div class="svc"><h3>Network & secure development</h3><p>Nmap, Wireshark and Metasploit assessments backed by CCNA and Linux skills, and full-stack features built with JWT, RBAC and Clean Architecture.</p></div>
+ </div>
+</section>
+
+<section id="credentials">
+ <h2>Credentials</h2>
+ <p class="sub">What I hold today, and what I am working toward.</p>
+ <div class="creds">
+  <div><h3>Certified</h3>
+   <div class="pill done">CEH, score 47/50<span>Passed</span></div>
+   <div class="pill done">CCNA<span>Passed</span></div>
+   <div class="pill done">MCSA<span>Passed</span></div>
+   <div class="pill done">Red Hat / Linux<span>Trained</span></div></div>
+  <div><h3>In progress at IT Gate Academy</h3>
+   <div class="pill prog">OSCP path<span>Studying</span></div>
+   <div class="pill prog">eWPTX, advanced web testing<span>Studying</span></div>
+   <div class="pill prog">Web & mobile app pentesting<span>Studying</span></div>
+   <div class="pill prog">HackerOne bug bounty<span>Active</span></div></div>
+ </div>
+</section>
+
+<section id="process">
+ <h2>How an engagement runs</h2>
+ <p class="sub">The same five steps every time, so you always know where we are.</p>
+ <ol class="steps">
+  <li><strong>Scope</strong>What is in, what is out.</li>
+  <li><strong>Recon</strong>Map endpoints and roles.</li>
+  <li><strong>Exploit</strong>Prove each issue.</li>
+  <li><strong>Report</strong>Evidence, rating, fix.</li>
+  <li><strong>Retest</strong>Confirm the fixes hold.</li>
+ </ol>
+</section>
+
+<section id="proof">
+ <h2>Proof, not claims</h2>
+ <p class="sub">A sample of my report format, and the kind of bug behind it.</p>
+ <div class="proof">
+  <div class="finding">
+   <h3><span class="sev">HIGH</span>SQL injection on POST /login</h3>
+   <dl><dt>Impact</dt><dd>An attacker signs in as any user without a password.</dd><dt>Evidence</dt><dd>The payload in the login field returned every user row and a valid session.</dd><dt>Fix</dt><dd>Use parameterized queries. Treat input as data, never as SQL.</dd></dl>
+   <p class="note">Illustrative example, not a client finding.</p>
+  </div>
+  <div class="panel">
+   <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-m="bad">Vulnerable</button><button role="tab" aria-selected="false" data-m="good">Fixed</button></div>
+   <pre class="cd" id="code" tabindex="0"></pre>
+   <div class="res bad" id="res"></div>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <h2>Tools and stack</h2>
+ <p class="sub">Security tools, backed by the experience of building production software.</p>
+ <div class="chips"><span>Burp Suite</span><span>OWASP ZAP</span><span>Nmap</span><span>Wireshark</span><span>Metasploit</span><span>Hydra</span><span>Python</span><span>Bash</span><span>PowerShell</span><span>C# / ASP.NET Core 8</span><span>Angular / TypeScript</span><span>SQL Server</span><span>JWT / RBAC</span><span>Docker</span><span>Git</span></div>
+</section>
+
+<section id="contact">
+ <h2>Let’s secure your application</h2>
+ <p class="sub">Tell me what you are building and what worries you. I usually reply within a day.</p>
+ <div class="cta"><a class="btn wa" href="https://wa.me/201003286392?text=Hi%20Amr%2C%20I%27d%20like%20to%20discuss%20a%20security%20assessment." target="_blank" rel="noopener">Message me on WhatsApp</a><a class="btn ghost cvbtn" href="Amr_Karim_CV.pdf" download="Amr_Karim_CV.pdf" rel="noopener">Download CV</a><a class="btn ghost" href="mailto:amrkarim000@gmail.com">amrkarim000@gmail.com</a></div>
+ <div class="links"><a href="https://www.linkedin.com/in/amru-karim-7927042a2" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/3MR-Karim" target="_blank" rel="noopener">GitHub</a><span>Cairo, Egypt · Available for remote work</span></div>
+</section>
+</div>
+<footer><div class="wrap">© 2026 Amr Karim</div></footer>
+<a class="fab" href="https://wa.me/201003286392?text=Hi%20Amr%2C%20I%27d%20like%20to%20discuss%20a%20security%20assessment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+
+<script>
+var M={bad:{code:'<span class="c">// Login lookup built by string concatenation</span>\nvar sql = "SELECT * FROM Users WHERE Email = \'"\n          + email + "\'";\nreturn db.Query&lt;User&gt;(sql);\n\n<span class="c">// Attacker sends: \' OR \'1\'=\'1\' --</span>',res:'<b>EXPLOITED</b><span>Every user is returned. Login is bypassed.</span>'},
+good:{code:'<span class="c">// Same lookup, parameterized by EF Core</span>\nreturn await db.Users\n    .AsNoTracking()\n    .Where(u =&gt; u.Email == email)\n    .FirstOrDefaultAsync();\n\n<span class="c">// Attacker sends: \' OR \'1\'=\'1\' --</span>',res:'<b>BLOCKED</b><span>Input is data, never SQL. No rows returned.</span>'}};
+var code=document.getElementById('code'),res=document.getElementById('res'),tabs=document.querySelectorAll('.tabs button');
+function show(m){code.innerHTML=M[m].code;res.className='res '+m;res.innerHTML=M[m].res;tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.m===m)})}
+tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.m)})});show('bad');
+
+var L=[['p','$ nmap -sV -p 80,443 app.example.com'],['d','443/tcp  open  https  nginx 1.24'],['p','$ amr test /api --owasp-top10'],['h','[HIGH]  IDOR      GET  /api/orders/{id}'],['h','[HIGH]  SQLi      POST /login'],['m','[MED]   No rate limit  /api/otp'],['p','$ amr report --export findings.pdf'],['ok','\u2713 3 findings. Proof of concept and fix for each.']];
+var t=document.getElementById('t'),reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function line(c,s){var e=document.createElement('span');e.className=c;e.textContent=s+'\n';t.appendChild(e);return e}
+if(reduce){L.forEach(function(l){line(l[0],l[1])})}else{
+var caret=document.createElement('span');caret.className='caret';
+(function run(i){if(i>=L.length){t.appendChild(caret);return}
+ var l=L[i];if(caret.parentNode)t.removeChild(caret);
+ if(l[0]==='p'){var e=document.createElement('span');e.className='p';t.appendChild(e);t.appendChild(caret);var k=0;
+  (function ty(){e.textContent=l[1].slice(0,++k);if(k<l[1].length)setTimeout(ty,28);else{t.removeChild(caret);e.textContent+='\n';setTimeout(function(){run(i+1)},350)}})()}
+ else{line(l[0],l[1]);setTimeout(function(){run(i+1)},320)}})(0)}
+</script>
+<script>
+(function(){var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var bar=document.createElement('div');bar.className='sbar';document.body.appendChild(bar);
+addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/Math.max(1,h.scrollHeight-h.clientHeight)*100)+'%'},{passive:true});
+document.querySelectorAll('.svc').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+function fmt(e,v){e.textContent=Math.round(v).toLocaleString('en-US')}
+function cnt(el){var n=+el.dataset.n,s=null;function f(ts){if(!s)s=ts;var p=Math.min((ts-s)/1400,1);fmt(el,n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+if(rm||!('IntersectionObserver' in window)){document.querySelectorAll('[data-n]').forEach(function(e){fmt(e,+e.dataset.n)});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;var el=en.target;io.unobserve(el);
+if(el.dataset.n){cnt(el);return}
+el.classList.add('in');setTimeout(function(){el.classList.remove('rv','in');el.style.transitionDelay=''},1400)})},{threshold:.15});
+document.querySelectorAll('section>h2,section>.sub,.svc,.pill,.steps li,.finding,.panel,.chips span,.stats>div').forEach(function(el,i){el.classList.add('rv');el.style.transitionDelay=((i%4)*90)+'ms';io.observe(el)});
+document.querySelectorAll('[data-n]').forEach(function(e){io.observe(e)});
+})();
+</script>
+<script>
+(function(){var h=document.documentElement,K='ak-theme';
+function set(t){h.setAttribute('data-t',t);document.querySelectorAll('.sw button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.t===t)})}
+var s='emerald';try{s=localStorage.getItem(K)||s}catch(e){}set(s);
+document.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){set(b.dataset.t);try{localStorage.setItem(K,b.dataset.t)}catch(e){}})});
+var fb=document.querySelectorAll('.flt button'),pj=document.querySelectorAll('.proj');
+fb.forEach(function(b){b.addEventListener('click',function(){fb.forEach(function(x){x.setAttribute('aria-pressed',x===b)});pj.forEach(function(p){p.hidden=!(b.dataset.f==='all'||p.dataset.k===b.dataset.f)})})});
+})();
+</script>
+</body>
+</html>
